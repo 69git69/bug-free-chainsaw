@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block title %}Index{% endblock %}
+{% block body %}
+  <h2>Articles</h2>
+  <form action="" class="query-box" method="">
+    <input type="text" name="q" id="query">
+    <input type="submit" value="Search">
+  </form>
+  <ul>
+      <
+    {% for article in articles %}
+    <li>
+      <a href="/article/{{article.id}}"><h3>{{article.title}}</h3></a>
+    </li>
+    {% endfor %}
+  </ul>
+{% endblock %}
